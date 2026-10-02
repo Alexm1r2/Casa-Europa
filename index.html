@@ -35,7 +35,78 @@ footer{padding:25px 4vw 50px;color:#777;font-size:12px}
 </head>
 <body>
 <header>
-<h2><input autocomplete="off" id="q" placeholder="RO/DE"/>
+ <h2> <!-- Language Toggle Button -->
+<button id="languageToggle" type="button" class="language-toggle">
+    RO / DE
+</button>
+
+<!-- Hidden Google Translate element -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<style>
+.language-toggle {
+    padding: 10px 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    color: #222;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.language-toggle:hover {
+    background: #f2f2f2;
+}
+
+.language-toggle:active {
+    transform: scale(0.97);
+}
+</style>
+
+<script>
+let currentLanguage = "ro";
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: "ro",
+            includedLanguages: "ro,de",
+            autoDisplay: false
+        },
+        "google_translate_element"
+    );
+}
+
+document.getElementById("languageToggle").addEventListener("click", function () {
+
+    const translateSelect = document.querySelector(".goog-te-combo");
+
+    if (!translateSelect) {
+        return;
+    }
+
+    if (currentLanguage === "ro") {
+
+        // Translate Romanian page to German
+        translateSelect.value = "de";
+        translateSelect.dispatchEvent(new Event("change"));
+
+        currentLanguage = "de";
+
+    } else {
+
+        // Translate German page back to Romanian
+        translateSelect.value = "ro";
+        translateSelect.dispatchEvent(new Event("change"));
+
+        currentLanguage = "ro";
+    }
+});
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
  <html lang="ro or de">
 <h1>Catalog produse românești</h1>
 <div class="controls">
