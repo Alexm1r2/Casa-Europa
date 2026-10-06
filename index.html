@@ -2,134 +2,182 @@
 <html lang="ro">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Catalog produse românești – prețuri în euro</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Casa Europa – Produse românești în Warburg</title>
+<meta name="description" content="Catalogul Casa Europa: mezeluri, brânzeturi, vinuri, dulciuri, condimente și conserve românești, cu prețuri în euro. Sternstraße 1, 34414 Warburg."/>
+<meta name="theme-color" content="#9b1c1c"/>
 <style>
-:root{--bg:#f7f7f5;--card:#fff;--ink:#1e1e1e;--muted:#777;--accent:#8c1d18;--line:#e7e4df}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:18px 4vw}
-h1{margin:0 0 5px;font-size:clamp(24px,4vw,38px)} .sub{color:var(--muted);font-size:14px}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-input,select{border:1px solid #d8d4cf;border-radius:10px;padding:11px 13px;background:white;font-size:14px}
-input{flex:1;min-width:220px} select{min-width:220px}
-main{padding:28px 4vw 60px} .section{margin:0 0 35px} .section h2{font-size:24px;margin:0 0 15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 2px 9px rgba(0,0,0,.05);transition:.15s}
-.card:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(0,0,0,.08)}
-.photo-wrap{aspect-ratio:1/1;background:#fafafa;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.photo-wrap img{width:100%;height:100%;object-fit:contain}
-.body{padding:12px 13px 15px} .brand{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);font-weight:700;min-height:16px}
-h3{font-size:15px;line-height:1.3;margin:5px 0 9px} .price{font-size:19px;font-weight:800}
-.note{background:#fff9e9;border:1px solid #ead9a8;border-radius:12px;padding:12px 14px;color:#5f511f;font-size:13px;margin:15px 0}
-footer{padding:25px 4vw 50px;color:#777;font-size:12px}
-@media(max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px} .body{padding:10px} h3{font-size:14px}}
-.shop{display:flex;align-items:center;gap:16px;margin-top:10px}
-.shop-logo{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none;background:#fff}
-.shop>div{min-width:0}.shop h1{margin:0 0 4px;overflow-wrap:anywhere}
-.contact{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--muted)}
-.contact a{display:inline-flex;align-items:center;gap:5px;color:inherit;text-decoration:none;font-weight:600}
-.contact a:hover{color:var(--accent);text-decoration:underline}
-@media(max-width:600px){.shop-logo{width:60px;height:60px}.shop{gap:10px}.contact{font-size:13px}}
+:root{--bg:#faf7f2;--card:#fff;--ink:#1f1a17;--muted:#6f6660;--accent:#9b1c1c;--accent2:#c2410c;--gold:#d4a017;--blue:#002b7f;--line:#ece5dc;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;top:0!important}
+a{color:inherit}
+.goog-te-banner-frame,iframe.skiptranslate,.goog-te-balloon-frame,#goog-gt-tt{display:none!important}
+.tricolor{height:5px;background:linear-gradient(90deg,var(--blue) 0 33.3%,#fcd116 33.3% 66.6%,#ce1126 66.6%)}
+.topbar{background:#fff;border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1280px;margin:0 auto;padding:12px 4vw;display:flex;align-items:center;gap:14px}
+.shop-logo{width:62px;height:62px;border-radius:50%;object-fit:cover;flex:none;background:#fff;box-shadow:0 0 0 3px #fff,0 0 0 4px var(--line)}
+.brandname{min-width:0;flex:1}
+.brandname strong{display:block;font-size:20px;letter-spacing:.01em}
+.brandname span{display:block;font-size:13px;color:var(--muted)}
+.top-actions{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 18px;font-weight:700;font-size:14px;text-decoration:none;border:0;cursor:pointer;transition:.18s;white-space:nowrap;font-family:inherit}
+.btn svg{flex:none}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(155,28,28,.25)}
+.btn-primary:hover{background:#7f1515;transform:translateY(-1px)}
+.btn-light{background:#fff;color:var(--accent)}
+.btn-light:hover{background:#fff5f0;transform:translateY(-1px)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.24)}
+.btn-outline{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.language-toggle{padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;cursor:pointer;transition:.18s;font-family:inherit}
+.language-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.12) 0 120px,transparent 121px),radial-gradient(circle at 95% 90%,rgba(255,255,255,.08) 0 200px,transparent 201px),linear-gradient(135deg,#6e1010 0%,#9b1c1c 55%,#c2410c 100%);color:#fff}
+.hero-in{max-width:1280px;margin:0 auto;padding:54px 4vw 60px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,4.6vw,52px);line-height:1.08;margin:16px 0 14px;letter-spacing:-.02em}
+.hero p{font-size:clamp(15px,1.6vw,18px);line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 24px;max-width:600px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px}
+.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:22px;padding:22px;backdrop-filter:blur(6px)}
+.hero-card .row{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15);text-decoration:none}
+.hero-card .row:last-child{border-bottom:0}
+.hero-card .ic{width:40px;height:40px;border-radius:12px;background:#fff;color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.hero-card b{display:block;font-size:15px}.hero-card small{color:rgba(255,255,255,.8);font-size:13px}
+.features{max-width:1280px;margin:-28px auto 0;padding:0 4vw;position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:center;box-shadow:0 10px 30px rgba(60,30,10,.07)}
+.feature .ic{width:42px;height:42px;border-radius:12px;background:#fdf0e8;color:var(--accent);display:flex;align-items:center;justify-content:center;flex:none}
+.feature b{display:block;font-size:14px}.feature small{color:var(--muted);font-size:12.5px;line-height:1.35;display:block}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(250,247,242,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-top:30px}
+.toolbar-in{max-width:1280px;margin:0 auto;padding:14px 4vw 10px}
+.search-row{display:flex;gap:10px;flex-wrap:wrap}
+.search{flex:1;min-width:240px;position:relative}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;border:1px solid #ddd3c7;border-radius:999px;padding:13px 40px 13px 44px;background:#fff;font-size:15px;font-family:inherit;outline:none;transition:.18s}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(155,28,28,.1)}
+.search .clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:#f1ebe4;width:28px;height:28px;border-radius:50%;cursor:pointer;display:none;font-size:16px;color:var(--muted)}
+select{border:1px solid #ddd3c7;border-radius:999px;padding:12px 16px;background:#fff;font-size:14px;font-family:inherit;cursor:pointer}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:thin}
+.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:600;cursor:pointer;transition:.15s;display:inline-flex;gap:7px;align-items:center;font-family:inherit;color:var(--ink)}
+.chip i{font-style:normal;font-size:11.5px;background:#f3ede6;color:var(--muted);padding:2px 7px;border-radius:999px}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip.active i{background:rgba(255,255,255,.22);color:#fff}
+.result-info{font-size:13px;color:var(--muted);padding:4px 0 2px}
+main{max-width:1280px;margin:0 auto;padding:26px 4vw 70px}
+.section{margin:0 0 44px;scroll-margin-top:170px}
+.section h2{font-size:clamp(21px,2.4vw,27px);margin:0 0 18px;display:flex;align-items:center;gap:12px;letter-spacing:-.01em}
+.section h2::before{content:"";width:6px;height:28px;border-radius:4px;background:linear-gradient(var(--accent),var(--accent2))}
+.section h2 .count{font-size:13px;font-weight:600;color:var(--muted);background:#fff;border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 10px rgba(60,30,10,.04);transition:transform .2s,box-shadow .2s,border-color .2s;cursor:pointer;display:flex;flex-direction:column;outline:none}
+.card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 16px 34px rgba(60,30,10,.12);border-color:#e3d2c2}
+.card:focus-visible{box-shadow:0 0 0 3px rgba(155,28,28,.35)}
+.photo-wrap{aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px;position:relative}
+.photo-wrap img{width:100%;height:100%;object-fit:contain;transition:transform .35s}
+.card:hover .photo-wrap img{transform:scale(1.06)}
+.body{padding:12px 15px 15px;border-top:1px solid #f4eee7;display:flex;flex-direction:column;flex:1}
+.brand{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:800;min-height:15px}
+h3{font-size:15px;line-height:1.32;margin:5px 0 10px;flex:1}
+.price{font-size:20px;font-weight:800;color:var(--ink)}
+.more{margin-top:10px;font-size:13px;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:6px;opacity:.85}
+.card:hover .more{opacity:1}
+.card:hover .more svg{transform:translateX(3px)}.more svg{transition:.2s}
+.empty{display:none;text-align:center;padding:60px 20px;color:var(--muted)}
+.empty b{display:block;font-size:20px;color:var(--ink);margin-bottom:6px}
+footer{background:#1f1a17;color:#d9cfc6;margin-top:20px}
+.footer-in{max-width:1280px;margin:0 auto;padding:40px 4vw 26px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer h4{color:#fff;margin:0 0 12px;font-size:15px}
+footer p,footer a{font-size:14px;line-height:1.7;color:#d9cfc6;text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.f-brand{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.f-brand img{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.f-brand strong{color:#fff;font-size:18px}
+.copy{border-top:1px solid #3a322d;text-align:center;font-size:12.5px;padding:16px 4vw;color:#a39890}
+.to-top{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:50%;border:0;background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:30;display:flex;align-items:center;justify-content:center}
+.to-top.show{opacity:1;pointer-events:auto}
+.call-fab{position:fixed;left:18px;bottom:18px;z-index:30;display:none}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(25,15,10,.6);backdrop-filter:blur(4px)}
+.modal.open{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{transform:translateY(16px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.dialog{background:#fff;border-radius:24px;max-width:960px;width:100%;max-height:calc(100vh - 40px);overflow:auto;position:relative;animation:pop .25s;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:#f4eee7;cursor:pointer;font-size:22px;line-height:1;z-index:2;color:var(--ink)}
+.close:hover{background:#ead9cb}
+.d-grid{display:grid;grid-template-columns:1fr 1.1fr}
+.d-photo{background:#fff;padding:30px;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line);min-height:360px}
+.d-photo img{max-width:100%;max-height:440px;object-fit:contain}
+.d-info{padding:34px 32px 28px}
+.d-cat{display:inline-block;background:#fdf0e8;color:var(--accent);font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;text-decoration:none;cursor:pointer;border:0;font-family:inherit}
+.d-brand{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800;margin:14px 0 4px}
+.d-info h2{font-size:clamp(22px,3vw,30px);margin:0 0 10px;line-height:1.15;letter-spacing:-.01em;padding-right:30px}
+.d-price{font-size:32px;font-weight:900;color:var(--accent)}
+.d-unit{font-size:13px;color:var(--muted);margin-top:2px;min-height:18px}
+.d-desc{font-size:15px;line-height:1.65;color:#3d3530;margin:16px 0}
+.d-table{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 16px}
+.d-table th{text-align:left;color:var(--muted);font-weight:600;width:42%;padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.d-table td{padding:9px 0;border-bottom:1px solid var(--line);font-weight:600}
+.d-tip{display:flex;gap:10px;background:#f7f4ef;border-radius:14px;padding:12px 14px;font-size:13.5px;line-height:1.5;color:#4a413b;margin-bottom:10px}
+.d-tip svg{flex:none;color:var(--accent);margin-top:2px}
+.d-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px}
+.d-note{font-size:12px;color:var(--muted);line-height:1.5}
+.similar{border-top:1px solid var(--line);padding:22px 32px 28px;background:#fcfaf7}
+.similar h4{margin:0 0 14px;font-size:16px}
+.sim-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sim{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;cursor:pointer;transition:.18s;text-align:left;font-family:inherit;color:var(--ink)}
+.sim:hover{border-color:var(--accent);transform:translateY(-2px)}
+.sim img{width:100%;aspect-ratio:1/1;object-fit:contain;display:block;margin-bottom:8px}
+.sim span{display:block;font-size:12.5px;font-weight:600;line-height:1.3;min-height:33px}
+.sim b{font-size:14px;color:var(--accent)}
+body.lock{overflow:hidden}
+@media(max-width:900px){.hero-in{grid-template-columns:1fr;padding:36px 4vw 54px}.features{grid-template-columns:repeat(2,1fr)}.footer-in{grid-template-columns:1fr}.d-grid{grid-template-columns:1fr}.d-photo{border-right:0;border-bottom:1px solid var(--line);min-height:0;padding:20px}.d-photo img{max-height:300px}.sim-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.top-actions .btn-primary{display:none}.call-fab{display:inline-flex}.shop-logo{width:50px;height:50px}.brandname strong{font-size:17px}.brandname span{font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.body{padding:10px 11px 12px}h3{font-size:13.5px}.price{font-size:17px}.more{font-size:12px}.features{gap:10px}.feature{padding:12px;flex-direction:column;align-items:flex-start;gap:8px}.d-info{padding:24px 20px}.similar{padding:18px 20px 22px}.modal{padding:0;align-items:flex-end}.dialog{border-radius:22px 22px 0 0;max-height:94vh}.toolbar{margin-top:20px}.search-row select{flex:1}}
+
 </style>
 </head>
 <body>
-<header>
-<!-- Language Toggle Button -->
-<button id="languageToggle" type="button" class="language-toggle">
-    RO / DE
-</button>
-
-<!-- Hidden Google Translate element -->
 <div id="google_translate_element" style="display:none;"></div>
-
-<style>
-.language-toggle {
-    padding: 10px 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: white;
-    color: #222;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.language-toggle:hover {
-    background: #f2f2f2;
-}
-
-.language-toggle:active {
-    transform: scale(0.97);
-}
-</style>
-
-<script>
-let currentLanguage = "ro";
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-        {
-            pageLanguage: "ro",
-            includedLanguages: "ro,de",
-            autoDisplay: false
-        },
-        "google_translate_element"
-    );
-}
-
-document.getElementById("languageToggle").addEventListener("click", function () {
-
-    const translateSelect = document.querySelector(".goog-te-combo");
-
-    if (!translateSelect) {
-        return;
-    }
-
-    if (currentLanguage === "ro") {
-
-        // Translate Romanian page to German
-        translateSelect.value = "de";
-        translateSelect.dispatchEvent(new Event("change"));
-
-        currentLanguage = "de";
-
-    } else {
-
-        // Translate German page back to Romanian
-        translateSelect.value = "ro";
-        translateSelect.dispatchEvent(new Event("change"));
-
-        currentLanguage = "ro";
-    }
-});
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<div class="shop">
+<div class="tricolor"></div>
+<div class="topbar"><div class="topbar-in">
 <img class="shop-logo" src="data:image/jpeg;base64,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" alt="Casa Europa logo">
+<div class="brandname notranslate" translate="no"><strong>Casa Europa</strong><span>Magazin internațional de alimente · Warburg</span></div>
+<div class="top-actions">
+<a class="btn btn-primary notranslate" translate="no" href="tel:+4915224297055"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> +49 1522 4297055</a>
+<button id="languageToggle" type="button" class="language-toggle notranslate" translate="no">RO / DE</button>
+</div>
+</div></div>
+<section class="hero"><div class="hero-in">
 <div>
-<h1>Catalog produse românești</h1>
-<div class="contact notranslate" translate="no">
-<a href="https://www.google.com/maps/search/?api=1&amp;query=Sternstra%C3%9Fe+1%2C+34414+Warburg" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Sternstraße 1, 34414 Warburg</a>
-<a href="tel:+4915224297055"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> +49 1522 4297055</a>
+<span class="eyebrow">Magazin de produse românești</span>
+<h1>Gusturi autentice din România, aproape de casă</h1>
+<p>Mezeluri și afumături, brânzeturi, vinuri, cozonac, condimente și conserve, așa cum le știi de acasă. Toate prețurile sunt în euro.</p>
+<div class="hero-btns">
+<a class="btn btn-light" href="#produse">Vezi produsele →</a>
+<a class="btn btn-ghost" href="tel:+4915224297055"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> Sună-ne</a>
 </div>
 </div>
+<div class="hero-card">
+<a class="row notranslate" translate="no" href="https://www.google.com/maps/search/?api=1&amp;query=Sternstra%C3%9Fe+1%2C+34414+Warburg" target="_blank" rel="noopener"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span><span><b>Sternstraße 1</b><small>34414 Warburg</small></span></a>
+<a class="row notranslate" translate="no" href="tel:+4915224297055"><span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><span><b>+49 1522 4297055</b><small>Telefon</small></span></a>
+<div class="row"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span><b>245 de produse</b><small>în 9 categorii</small></span></div>
 </div>
-<div class="controls">
-<input autocomplete="off" id="q" placeholder="Caută produs sau firmă…"/>
-<select id="cat"><option value="">Toate categoriile</option><option value="Mezeluri și produse din carne">Mezeluri și produse din carne</option>
-<option value="Cârnați și afumături">Cârnați și afumături</option>
-<option value="Salamuri și șunci">Salamuri și șunci</option>
-<option value="Brânzeturi și lactate">Brânzeturi și lactate</option>
-<option value="Produse de curățenie">Produse de curățenie</option>
-<option value="Băuturi alcoolice">Băuturi alcoolice</option>
-<option value="Cozonac, dulciuri și produse de patiserie">Cozonac, dulciuri și produse de patiserie</option>
-<option value="Condimente">Condimente</option>
-<option value="Conserve, pateuri și produse de bază">Conserve, pateuri și produse de bază</option></select>
+</div></section>
+<div class="features">
+<div class="feature"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 7 7 .6-5.3 4.7 1.6 7L12 17.8 5.7 21.3l1.6-7L2 9.6 9 9z"/></svg></span><span><b>Produse autentice</b><small>Mărci românești cunoscute și rețete tradiționale</small></span></div>
+<div class="feature"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span><span><b>Ofertă variată</b><small>De la mezeluri și vinuri la condimente</small></span></div>
+<div class="feature"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 7a7 7 0 1 0 0 10M4 10h10M4 14h10"/></svg></span><span><b>Prețuri în euro</b><small>Prețuri clare pentru fiecare produs</small></span></div>
+<div class="feature"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><span><b>Detalii la un clic</b><small>Apasă pe un produs pentru toate informațiile</small></span></div>
 </div>
-</header>
+<div class="toolbar" id="produse"><div class="toolbar-in">
+<div class="search-row">
+<div class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input autocomplete="off" id="q" type="search" placeholder="Caută produs sau firmă… (ex: cozonac, Cio, vin)"/><button class="clear" id="clear" type="button" aria-label="Șterge căutarea">×</button></div>
+<select id="sort" aria-label="Ordonează"><option value="">Ordonare implicită</option><option value="asc">Preț crescător</option><option value="desc">Preț descrescător</option><option value="az">Nume A–Z</option></select>
+</div>
+<div class="chips" id="chips"></div>
+<div class="result-info" id="resultInfo"></div>
+</div></div>
 <main id="app">
+
 <section class="section" data-section="Mezeluri și produse din carne"><h2>Mezeluri și produse din carne</h2><div class="grid">
 <article class="card" data-cat="Mezeluri și produse din carne" data-search="cris-tim tobă țărănească">
 <div class="photo-wrap">
@@ -361,7 +409,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Mezeluri și produse din carne" data-search="mici porc">
 <div class="photo-wrap">
-<img alt="Mici porc" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk1pY2kgcG9yYyBDYXJvbGk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.1AUL7b6QqS3IWf5tjMoJ6AHaE8&amp;w=600&amp;h=600"/>
+<img alt="Mici porc" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk1pY2kgcG9yYyBDYXJvbGk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://i0.wp.com/www.traista-romaneasca.de/wp-content/uploads/2025/11/mici-wuppertal-alin-germania-magazin-romanesc.jpg?fit=600%2C600&amp;ssl=1"/>
 </div>
 <div class="body">
 <h3>Mici porc</h3>
@@ -370,7 +418,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Mezeluri și produse din carne" data-search=" mici oaie/vită">
 <div class="photo-wrap">
-<img alt="Mici oaie/vită" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk1pY2kgb2FpZS92aXTEgzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.9WG1I4BewT81V5CqjFX05QHaFj&amp;w=600&amp;h=600"/>
+<img alt="Mici oaie/vită" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk1pY2kgb2FpZS92aXTEgzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://i0.wp.com/www.traista-romaneasca.de/wp-content/uploads/2026/02/mici-mititei-wuppertal-oaie-vita-alin.jpeg?fit=600%2C600&amp;ssl=1"/>
 </div>
 <div class="body">
 <h3>Mici oaie/vită</h3>
@@ -399,7 +447,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Cârnați și afumături" data-search="cârnați oltenești">
 <div class="photo-wrap">
-<img alt="Cârnați Oltenești" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk9sdGVuZciZdGk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://cdn.sezamo.ro/images/grocery/products/9368/9368-1653894417161.jpg"/>
+<img alt="Cârnați Oltenești" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk9sdGVuZciZdGk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.-9bC8lCAD5PcOaYiq9RxkgHaFj&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -429,7 +477,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Cârnați și afumături" data-search=" cârnați moldovenești">
 <div class="photo-wrap">
-<img alt="Cârnați moldovenești" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkPDonJuYcibaSBtb2xkb3ZlbmXImXRpPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=C%C3%A2rna%C8%9Bi%20moldovene%C8%99ti&amp;w=600&amp;h=600"/>
+<img alt="Cârnați moldovenești" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkPDonJuYcibaSBtb2xkb3ZlbmXImXRpPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?id=OIP.sAQbYn4fp_etTwF3vuBImQHaE9&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -469,7 +517,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Cârnați și afumături" data-search="fox crenvurști piept pui fox">
 <div class="photo-wrap">
-<img alt="Crenvurști piept pui Fox" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNyZW52dXLImXRpIHBpZXB0IHB1aSBGb3g8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Fox%20Crenvur%C8%99ti%20piept%20pui%20Fox&amp;w=600&amp;h=600"/>
+<img alt="Crenvurști piept pui Fox" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNyZW52dXLImXRpIHBpZXB0IHB1aSBGb3g8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.4R9O1nyw-JzRLWvYsJy8DAHaKE&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Fox</div>
@@ -650,7 +698,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Salamuri și șunci" data-search=" parizel porc/pui">
 <div class="photo-wrap">
-<img alt="Parizel porc/pui" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBhcml6ZWwgcG9yYy9wdWk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Parizel%20porc/pui&amp;w=600&amp;h=600"/>
+<img alt="Parizel porc/pui" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBhcml6ZWwgcG9yYy9wdWk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.xekCxg51K13iSZzXPOwZGAHaFj&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -680,7 +728,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Salamuri și șunci" data-search=" chișcă">
 <div class="photo-wrap">
-<img alt="Chișcă" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNoaciZY8SDPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Chi%C8%99c%C4%83&amp;w=600&amp;h=600"/>
+<img alt="Chișcă" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNoaciZY8SDPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?id=OIP.BLrRMtKb8ANB8eVwFHGwqgHaGE&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -691,7 +739,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <section class="section" data-section="Brânzeturi și lactate"><h2>Brânzeturi și lactate</h2><div class="grid">
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" brânză burduf">
 <div class="photo-wrap">
-<img alt="Brânză burduf" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJyw6JuesSDIGJ1cmR1ZjwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Br%C3%A2nz%C4%83%20burduf&amp;w=600&amp;h=600"/>
+<img alt="Brânză burduf" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJyw6JuesSDIGJ1cmR1ZjwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.4EVge_m8AaGkX2opMpQ5OgHaHa&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -891,12 +939,12 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">12,50 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" vișinată 700 ml">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" vișinată 700 ml vox maris">
 <div class="photo-wrap">
-<img alt="Vișinată 700 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlZpyJlpbmF0xIMgNzAwIG1sPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Vi%C8%99inat%C4%83%20700%20ml&amp;w=600&amp;h=600"/>
+<img alt="Vișinată 700 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlZpyJlpbmF0xIMgNzAwIG1sPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?id=OIP.YB4Msuqw9tyWyE52GoCaawHaHa&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Vox Maris</div>
 <h3>Vișinată 700 ml</h3>
 <div class="price">14,90 €</div>
 </div>
@@ -931,32 +979,32 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">14,90 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" tărie bihor 0,5 l">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" tărie bihor 0,5 l rieni">
 <div class="photo-wrap">
-<img alt="Tărie Bihor 0,5 l" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlTEg3JpZSBCaWhvciAwLDUgbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=T%C4%83rie%20Bihor%200%2C5%20l&amp;w=600&amp;h=600"/>
+<img alt="Tărie Bihor 0,5 l" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlTEg3JpZSBCaWhvciAwLDUgbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.mFYHbo1EjCxZojn9cQJxvwHaHa&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Rieni</div>
 <h3>Tărie Bihor 0,5 l</h3>
 <div class="price">10,90 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" coniac 7 stele 500 ml">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" coniac 7 stele 500 ml alexandrion">
 <div class="photo-wrap">
-<img alt="Coniac 7 stele 500 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNvbmlhYyA3IHN0ZWxlIDUwMCBtbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Coniac%207%20stele%20500%20ml&amp;w=600&amp;h=600"/>
+<img alt="Coniac 7 stele 500 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNvbmlhYyA3IHN0ZWxlIDUwMCBtbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.w5ZNy_BUR0eFZTbmWE6nJwHaJH&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Alexandrion</div>
 <h3>Coniac 7 stele 500 ml</h3>
 <div class="price">16,99 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" coniac 5 stele">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" coniac 5 stele alexandrion">
 <div class="photo-wrap">
-<img alt="Coniac 5 stele" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNvbmlhYyA1IHN0ZWxlPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Coniac%205%20stele&amp;w=600&amp;h=600"/>
+<img alt="Coniac 5 stele" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNvbmlhYyA1IHN0ZWxlPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?id=OIP.IAcbgM7JwN_UzayJ6AJyRAHaJW&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Alexandrion</div>
 <h3>Coniac 5 stele</h3>
 <div class="price">18,99 €</div>
 </div>
@@ -979,16 +1027,6 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="brand">Jidvei</div>
 <h3>Jidvei 700 ml</h3>
 <div class="price">29,99 €</div>
-</div>
-</article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" vin">
-<div class="photo-wrap">
-<img alt="Vin" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlZpbjwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Vin&amp;w=600&amp;h=600"/>
-</div>
-<div class="body">
-<div class="brand">Produs tradițional</div>
-<h3>Vin</h3>
-<div class="price">8,49 €</div>
 </div>
 </article>
 <article class="card" data-cat="Băuturi alcoolice" data-search="alexandrion alexandrion 7 stele">
@@ -1071,22 +1109,22 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">11,90 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" sângele ursului">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" sângele ursului crama ceptura">
 <div class="photo-wrap">
-<img alt="Sângele Ursului" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlPDom5nZWxlIFVyc3VsdWk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=S%C3%A2ngele%20Ursului&amp;w=600&amp;h=600"/>
+<img alt="Sângele Ursului" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlPDom5nZWxlIFVyc3VsdWk8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.XVScBZAJhHmYovlGomElDgHaHa&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Crama Ceptura</div>
 <h3>Sângele Ursului</h3>
 <div class="price">6,49 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" sânge de taur">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" sânge de taur zarea">
 <div class="photo-wrap">
-<img alt="Sânge de Taur" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlPDom5nZSBkZSBUYXVyPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=S%C3%A2nge%20de%20Taur&amp;w=600&amp;h=600"/>
+<img alt="Sânge de Taur" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlPDom5nZSBkZSBUYXVyPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?id=OIP.vosMrD80ukwOYvw3IaIRHgHaHa&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Zarea</div>
 <h3>Sânge de Taur</h3>
 <div class="price">6,49 €</div>
 </div>
@@ -1101,43 +1139,43 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">11,90 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" fetească regală 750 ml">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" fetească regală 750 ml jidvei">
 <div class="photo-wrap">
-<img alt="Fetească Regală 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZldGVhc2PEgyBSZWdhbMSDIDc1MCBtbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Feteasc%C4%83%20Regal%C4%83%20750%20ml&amp;w=600&amp;h=600"/>
+<img alt="Fetească Regală 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZldGVhc2PEgyBSZWdhbMSDIDc1MCBtbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.QcJwJxdCRdlHb9l3x0-jygAAAA&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Jidvei</div>
 <h3>Fetească Regală 750 ml</h3>
 <div class="price">6,29 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" busuioacă de bohotin 750 ml">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" busuioacă de bohotin 750 ml domeniile bohotin">
 <div class="photo-wrap">
-<img alt="Busuioacă de Bohotin 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJ1c3Vpb2FjxIMgZGUgQm9ob3RpbiA3NTAgbWw8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Busuioac%C4%83%20de%20Bohotin%20750%20ml&amp;w=600&amp;h=600"/>
+<img alt="Busuioacă de Bohotin 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJ1c3Vpb2FjxIMgZGUgQm9ob3RpbiA3NTAgbWw8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.uedG9U0rk0nL6fbSGi3-lgHaKp&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Domeniile Bohotin</div>
 <h3>Busuioacă de Bohotin 750 ml</h3>
 <div class="price">6,50 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" pelin 750 ml">
+<article class="card" data-cat="Băuturi alcoolice" data-search=" pelin 750 ml domeniile blaga">
 <div class="photo-wrap">
-<img alt="Pelin 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBlbGluIDc1MCBtbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Pelin%20750%20ml&amp;w=600&amp;h=600"/>
+<img alt="Pelin 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBlbGluIDc1MCBtbDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.RBWS-gYajdRmnrnoTlW7eQHaIy&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Domeniile Blaga</div>
 <h3>Pelin 750 ml</h3>
 <div class="price">7,49 €</div>
 </div>
 </article>
-<article class="card" data-cat="Băuturi alcoolice" data-search=" alb 750 ml">
+<article class="card" data-cat="Băuturi alcoolice" data-search="pelin alb 750 ml domeniile blaga">
 <div class="photo-wrap">
-<img alt="Alb 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkFsYiA3NTAgbWw8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Alb%20750%20ml&amp;w=600&amp;h=600"/>
+<img alt="Pelin alb 750 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkFsYiA3NTAgbWw8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.llLP3UuamVirsUqtnJ_sAwHaIy&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
-<h3>Alb 750 ml</h3>
+<div class="brand">Domeniile Blaga</div>
+<h3>Pelin alb 750 ml</h3>
 <div class="price">7,49 €</div>
 </div>
 </article>
@@ -1182,13 +1220,13 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">5,99 €</div>
 </div>
 </article>
-<article class="card" data-cat="Cozonac, dulciuri și produse de patiserie" data-search=" ciocolată/rahat 550 g">
+<article class="card" data-cat="Cozonac, dulciuri și produse de patiserie" data-search="cozonac ciocolată/rahat 550 g">
 <div class="photo-wrap">
-<img alt="Ciocolată/rahat 550 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNpb2NvbGF0xIMvcmFoYXQgNTUwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Ciocolat%C4%83/rahat%20550%20g&amp;w=600&amp;h=600"/>
+<img alt="Cozonac ciocolată/rahat 550 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNpb2NvbGF0xIMvcmFoYXQgNTUwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?id=OIP.ywTOMxxSHhyhvNSWgqUkVwHaE5&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
-<h3>Ciocolată/rahat 550 g</h3>
+<h3>Cozonac ciocolată/rahat 550 g</h3>
 <div class="price">7,99 €</div>
 </div>
 </article>
@@ -1224,7 +1262,7 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </article>
 <article class="card" data-cat="Cozonac, dulciuri și produse de patiserie" data-search="frăgezluța foi napolitane frăgezluța 200 g">
 <div class="photo-wrap">
-<img alt="Foi napolitane Frăgezluța 200 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZvaSBuYXBvbGl0YW5lIEZyxINnZXpsdcibYSAyMDAgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Fr%C4%83gezlu%C8%9Ba%20Foi%20napolitane%20Fr%C4%83gezlu%C8%9Ba%20200%20g&amp;w=600&amp;h=600"/>
+<img alt="Foi napolitane Frăgezluța 200 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZvaSBuYXBvbGl0YW5lIEZyxINnZXpsdcibYSAyMDAgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?id=OIP.-qdil5z0Xnp_80-jxBaWywHaEq&amp;w=600&amp;h=600"/>
 </div>
 <div class="body">
 <div class="brand">Frăgezluța</div>
@@ -1393,12 +1431,12 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">2,50 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" cacao 55 g">
+<article class="card" data-cat="Condimente" data-search=" cacao 55 g dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Cacao 55 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNhY2FvIDU1IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Cacao%2055%20g&amp;w=600&amp;h=600"/>
+<img alt="Cacao 55 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNhY2FvIDU1IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmkvr8ln3qvw407vzgcfetpt5"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Cacao 55 g</h3>
 <div class="price">2,50 €</div>
 </div>
@@ -1413,22 +1451,22 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">2,50 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" fructe de pădure 50 g">
+<article class="card" data-cat="Condimente" data-search=" fructe de pădure 50 g dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Fructe de pădure 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZydWN0ZSBkZSBwxINkdXJlIDUwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Fructe%20de%20p%C4%83dure%2050%20g&amp;w=600&amp;h=600"/>
+<img alt="Fructe de pădure 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZydWN0ZSBkZSBwxINkdXJlIDUwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmp3ahyr5av1207ux19wusebe"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Fructe de pădure 50 g</h3>
 <div class="price">2,50 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" lămâie 50 g">
+<article class="card" data-cat="Condimente" data-search=" lămâie 50 g dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Lămâie 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkzEg23DomllIDUwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=L%C4%83m%C3%A2ie%2050%20g&amp;w=600&amp;h=600"/>
+<img alt="Lămâie 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkzEg23DomllIDUwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmn9h9d3i2yyd07w325durpbo"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Lămâie 50 g</h3>
 <div class="price">2,50 €</div>
 </div>
@@ -1443,32 +1481,32 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">3,49 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" amoliu prăjituri 7 g">
+<article class="card" data-cat="Condimente" data-search=" amoniu prăjituri 7 g dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Amoliu prăjituri 7 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkFtb2xpdSBwcsSDaml0dXJpIDcgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Amoliu%20pr%C4%83jituri%207%20g&amp;w=600&amp;h=600"/>
+<img alt="Amoniu prăjituri 7 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkFtb2xpdSBwcsSDaml0dXJpIDcgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmp39s9zp9m3p07uxpp8gichx"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
-<h3>Amoliu prăjituri 7 g</h3>
+<div class="brand">Dr. Oetker</div>
+<h3>Amoniu prăjituri 7 g</h3>
 <div class="price">0,49 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" conservant alimentar 7 g">
+<article class="card" data-cat="Condimente" data-search=" conservant alimentar 7 g dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Conservant alimentar 7 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNvbnNlcnZhbnQgYWxpbWVudGFyIDcgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Conservant%20alimentar%207%20g&amp;w=600&amp;h=600"/>
+<img alt="Conservant alimentar 7 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNvbnNlcnZhbnQgYWxpbWVudGFyIDcgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmjc0y5kmf4q207w4rlyvadl4"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Conservant alimentar 7 g</h3>
 <div class="price">0,45 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search="pikant fix pikant fix dulce-acrișor 100 g">
+<article class="card" data-cat="Condimente" data-search="pikant fix pikant fix dulce-acrișor 100 g dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Pikant Fix dulce-acrișor 100 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBpa2FudCBGaXggZHVsY2UtYWNyaciZb3IgMTAwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Pikant%20Fix%20Pikant%20Fix%20dulce-acri%C8%99or%20100%20g&amp;w=600&amp;h=600"/>
+<img alt="Pikant Fix dulce-acrișor 100 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBpa2FudCBGaXggZHVsY2UtYWNyaciZb3IgMTAwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmqh7oo7r35yn07vz1nhzkh2l"/>
 </div>
 <div class="body">
-<div class="brand">Pikant Fix</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Pikant Fix dulce-acrișor 100 g</h3>
 <div class="price">1,35 €</div>
 </div>
@@ -1503,22 +1541,22 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">0,35 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" gelatină">
+<article class="card" data-cat="Condimente" data-search=" gelatină dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Gelatină" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkdlbGF0aW7EgzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Gelatin%C4%83&amp;w=600&amp;h=600"/>
+<img alt="Gelatină" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkdlbGF0aW7EgzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmdqjp1o53ubz06uiarck9eg2"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Gelatină</h3>
 <div class="price">0,55 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" zahăr vanilat">
+<article class="card" data-cat="Condimente" data-search=" zahăr vanilat dr. oetker dr oetker">
 <div class="photo-wrap">
-<img alt="Zahăr vanilat" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlphaMSDciB2YW5pbGF0PC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Zah%C4%83r%20vanilat&amp;w=600&amp;h=600"/>
+<img alt="Zahăr vanilat" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlphaMSDciB2YW5pbGF0PC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://eu-central-1-droetker.graphassets.com/AVtdz8Pl3QxerK0kYX32fz/cmjaoqozaon0r07ukmhpqx0iw"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Dr. Oetker</div>
 <h3>Zahăr vanilat</h3>
 <div class="price">0,25 €</div>
 </div>
@@ -1563,32 +1601,32 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">1,20 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" scorțișoară bucăți 20 g">
+<article class="card" data-cat="Condimente" data-search=" scorțișoară bucăți 20 g cio">
 <div class="photo-wrap">
-<img alt="Scorțișoară bucăți 20 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNjb3LIm2nImW9hcsSDIGJ1Y8SDyJtpIDIwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Scor%C8%9Bi%C8%99oar%C4%83%20buc%C4%83%C8%9Bi%2020%20g&amp;w=600&amp;h=600"/>
+<img alt="Scorțișoară bucăți 20 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNjb3LIm2nImW9hcsSDIGJ1Y8SDyJtpIDIwIGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://cio.ro/storage/app/uploads/public/677/e7b/181/677e7b1812ec3119183732.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Scorțișoară bucăți 20 g</h3>
 <div class="price">1,50 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" cuișoare 10 g">
+<article class="card" data-cat="Condimente" data-search=" cuișoare 10 g cio">
 <div class="photo-wrap">
-<img alt="Cuișoare 10 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkN1aciZb2FyZSAxMCBnPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Cui%C8%99oare%2010%20g&amp;w=600&amp;h=600"/>
+<img alt="Cuișoare 10 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkN1aciZb2FyZSAxMCBnPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://cio.ro/storage/app/uploads/public/677/e7b/14d/677e7b14dc17c345640232.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Cuișoare 10 g</h3>
 <div class="price">0,95 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" esență vanilie 30 ml">
+<article class="card" data-cat="Condimente" data-search=" esență vanilie 30 ml cio">
 <div class="photo-wrap">
-<img alt="Esență vanilie 30 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkVzZW7Im8SDIHZhbmlsaWUgMzAgbWw8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Esen%C8%9B%C4%83%20vanilie%2030%20ml&amp;w=600&amp;h=600"/>
+<img alt="Esență vanilie 30 ml" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkVzZW7Im8SDIHZhbmlsaWUgMzAgbWw8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://cio.ro/storage/app/uploads/public/677/e7b/152/677e7b1520bb6380639585.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Esență vanilie 30 ml</h3>
 <div class="price">1,30 €</div>
 </div>
@@ -1633,12 +1671,12 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">0,55 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" tarhon 4 g">
+<article class="card" data-cat="Condimente" data-search=" tarhon 4 g cio">
 <div class="photo-wrap">
-<img alt="Tarhon 4 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlRhcmhvbiA0IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Tarhon%204%20g&amp;w=600&amp;h=600"/>
+<img alt="Tarhon 4 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlRhcmhvbiA0IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://cio.ro/storage/app/uploads/public/677/e7b/187/677e7b187faa5615106543.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Tarhon 4 g</h3>
 <div class="price">0,99 €</div>
 </div>
@@ -1673,52 +1711,52 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">0,99 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" boia de ardei dulce 50 g">
+<article class="card" data-cat="Condimente" data-search=" boia de ardei dulce 50 g cio">
 <div class="photo-wrap">
-<img alt="Boia de ardei dulce 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJvaWEgZGUgYXJkZWkgZHVsY2UgNTAgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Boia%20de%20ardei%20dulce%2050%20g&amp;w=600&amp;h=600"/>
+<img alt="Boia de ardei dulce 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJvaWEgZGUgYXJkZWkgZHVsY2UgNTAgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://cio.ro/storage/app/uploads/public/677/e7b/135/677e7b135f126592291935.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Boia de ardei dulce 50 g</h3>
 <div class="price">1,20 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" boia de ardei iute 50 g">
+<article class="card" data-cat="Condimente" data-search=" boia de ardei iute 50 g cio">
 <div class="photo-wrap">
-<img alt="Boia de ardei iute 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJvaWEgZGUgYXJkZWkgaXV0ZSA1MCBnPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Boia%20de%20ardei%20iute%2050%20g&amp;w=600&amp;h=600"/>
+<img alt="Boia de ardei iute 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJvaWEgZGUgYXJkZWkgaXV0ZSA1MCBnPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://cio.ro/storage/app/uploads/public/677/e7b/136/677e7b1363bf7698410060.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Boia de ardei iute 50 g</h3>
 <div class="price">1,20 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" boia afumată 15 g">
+<article class="card" data-cat="Condimente" data-search=" boia afumată 15 g cio">
 <div class="photo-wrap">
-<img alt="Boia afumată 15 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJvaWEgYWZ1bWF0xIMgMTUgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Boia%20afumat%C4%83%2015%20g&amp;w=600&amp;h=600"/>
+<img alt="Boia afumată 15 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJvaWEgYWZ1bWF0xIMgMTUgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://cio.ro/storage/app/uploads/public/677/e7b/136/677e7b1360ae4568572694.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Boia afumată 15 g</h3>
 <div class="price">1,20 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" muștar boabe 50 g">
+<article class="card" data-cat="Condimente" data-search=" muștar boabe 50 g cio">
 <div class="photo-wrap">
-<img alt="Muștar boabe 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk11yJl0YXIgYm9hYmUgNTAgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Mu%C8%99tar%20boabe%2050%20g&amp;w=600&amp;h=600"/>
+<img alt="Muștar boabe 50 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPk11yJl0YXIgYm9hYmUgNTAgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://cio.ro/storage/app/uploads/public/677/e7b/164/677e7b164095c209183310.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Muștar boabe 50 g</h3>
 <div class="price">1,90 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" piper boabe 15 g">
+<article class="card" data-cat="Condimente" data-search=" piper boabe 15 g cio">
 <div class="photo-wrap">
-<img alt="Piper boabe 15 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBpcGVyIGJvYWJlIDE1IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Piper%20boabe%2015%20g&amp;w=600&amp;h=600"/>
+<img alt="Piper boabe 15 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBpcGVyIGJvYWJlIDE1IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://cio.ro/storage/app/uploads/public/677/e7b/14d/677e7b14dda9f033573922.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Piper boabe 15 g</h3>
 <div class="price">0,99 €</div>
 </div>
@@ -1733,32 +1771,32 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">0,99 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" busuioc 65 g">
+<article class="card" data-cat="Condimente" data-search=" busuioc 65 g cio">
 <div class="photo-wrap">
-<img alt="Busuioc 65 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJ1c3Vpb2MgNjUgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Busuioc%2065%20g&amp;w=600&amp;h=600"/>
+<img alt="Busuioc 65 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJ1c3Vpb2MgNjUgZzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://cio.ro/storage/app/uploads/public/677/e7b/139/677e7b1392fcd898945928.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Busuioc 65 g</h3>
 <div class="price">1,49 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" semințe mărar">
+<article class="card" data-cat="Condimente" data-search=" mărar cio">
 <div class="photo-wrap">
-<img alt="Semințe mărar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNlbWluyJtlIG3Eg3JhcjwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Semin%C8%9Be%20m%C4%83rar&amp;w=600&amp;h=600"/>
+<img alt="Mărar" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNlbWluyJtlIG3Eg3JhcjwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://cio.ro/storage/app/uploads/public/677/e7b/15e/677e7b15ea7ab185213913.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
-<h3>Semințe mărar</h3>
+<div class="brand">Cio</div>
+<h3>Mărar</h3>
 <div class="price">1,49 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" foi de dafin 5 g">
+<article class="card" data-cat="Condimente" data-search=" foi de dafin 5 g cio">
 <div class="photo-wrap">
-<img alt="Foi de dafin 5 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZvaSBkZSBkYWZpbiA1IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Foi%20de%20dafin%205%20g&amp;w=600&amp;h=600"/>
+<img alt="Foi de dafin 5 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZvaSBkZSBkYWZpbiA1IGc8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://cio.ro/storage/app/uploads/public/677/e7b/155/677e7b155b4a9780343789.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cio</div>
 <h3>Foi de dafin 5 g</h3>
 <div class="price">0,99 €</div>
 </div>
@@ -1793,12 +1831,12 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">1,15 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" usturoi granulat">
+<article class="card" data-cat="Condimente" data-search=" usturoi granulat cosmin">
 <div class="photo-wrap">
-<img alt="Usturoi granulat" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlVzdHVyb2kgZ3JhbnVsYXQ8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Usturoi%20granulat&amp;w=600&amp;h=600"/>
+<img alt="Usturoi granulat" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlVzdHVyb2kgZ3JhbnVsYXQ8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://www.cosmincondimente.ro/wp-content/uploads/2020/08/Usturoi-granulat-Cosmin-condimente.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cosmin</div>
 <h3>Usturoi granulat</h3>
 <div class="price">0,99 €</div>
 </div>
@@ -1813,12 +1851,12 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">0,99 €</div>
 </div>
 </article>
-<article class="card" data-cat="Condimente" data-search=" ienibahar măcinat 12 g">
+<article class="card" data-cat="Condimente" data-search="ienibahar măcinat 12 g cosmin">
 <div class="photo-wrap">
-<img alt="Ienibahar măcinat 12 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkllbmliYWhhciBtxINjaW5hdCAxMiBnPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Ienibahar%20m%C4%83cinat%2012%20g&amp;w=600&amp;h=600"/>
+<img alt="Ienibahar măcinat 12 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkllbmliYWhhciBtxINjaW5hdCAxMiBnPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://www.cosmincondimente.ro/wp-content/uploads/2020/08/Ienibahar-macinat-Cosmin-condimente.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Produs tradițional</div>
+<div class="brand">Cosmin</div>
 <h3>Ienibahar măcinat 12 g</h3>
 <div class="price">0,99 €</div>
 </div>
@@ -2574,21 +2612,302 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 <div class="price">0,99 €</div>
 </div>
 </article></div></section>
+
+<div class="empty" id="empty"><b>Nu am găsit niciun produs</b>Încearcă alt cuvânt sau alege „Toate”. Ne poți și suna: <a class="notranslate" translate="no" href="tel:+4915224297055">+49 1522 4297055</a></div>
 </main>
-<footer><strong class="notranslate" translate="no">Casa Europa · Sternstraße 1, 34414 Warburg · <a href="tel:+4915224297055">+49 1522 4297055</a></strong><br>Catalog creat din lista furnizată. Imaginile online pot proveni din rezultatele de imagini ale motorului de căutare și pot varia în timp.</footer>
+<footer>
+<div class="footer-in">
+<div><div class="f-brand"><img src="data:image/jpeg;base64,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" alt=""><strong class="notranslate" translate="no">Casa Europa</strong></div>
+<p>Magazinul tău de produse românești din Warburg. Gusturi de acasă: mezeluri, brânzeturi, vinuri, dulciuri și multe altele.</p></div>
+<div><h4>Contact</h4><p class="notranslate" translate="no"><a href="https://www.google.com/maps/search/?api=1&amp;query=Sternstra%C3%9Fe+1%2C+34414+Warburg" target="_blank" rel="noopener">Sternstraße 1, 34414 Warburg</a><br><a href="tel:+4915224297055">+49 1522 4297055</a></p></div>
+<div><h4>Despre catalog</h4><p>Prețurile sunt afișate în euro. Imaginile au rol de prezentare și pot diferi de produsele din magazin. Pentru ingrediente și alergeni, consultați eticheta produsului.</p></div>
+</div>
+<div class="copy">© <span id="year"></span> <span class="notranslate" translate="no">Casa Europa</span> · Toate drepturile rezervate</div>
+</footer>
+<a class="btn btn-primary call-fab notranslate" translate="no" href="tel:+4915224297055"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> Sună</a>
+<button class="to-top" id="toTop" type="button" aria-label="Înapoi sus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="dialog"></div></div>
 <script>
-const q=document.getElementById('q'), cat=document.getElementById('cat');
-function filter(){
- const term=q.value.trim().toLowerCase(), c=cat.value;
- document.querySelectorAll('.section').forEach(sec=>{
-   const sc=sec.dataset.section, okCat=!c||sc===c; let visible=0;
-   sec.querySelectorAll('.card').forEach(card=>{
-     const ok=!term||card.dataset.search.includes(term);
-     card.style.display=(ok&&okCat)?'block':'none'; if(ok&&okCat) visible++;
-   });
-   sec.style.display=visible?'block':'none';
- });
+(function(){
+const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+const fmt=n=>n.toFixed(2).replace('.',',')+' €';
+const TEL='tel:+4915224297055', MAP='https://www.google.com/maps/search/?api=1&query=Sternstra%C3%9Fe+1%2C+34414+Warburg';
+const arrow='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+const RULES=[
+[/^(vanilie|capsuni|cacao|alune|rolls capsuni|ciocolata|banana|cocos) 100 g/,null],
+[/toba/,'Tobă tradițională, preparată din carne și organe de porc fierte, condimentate și presate în membrană naturală. Se servește rece, tăiată felii subțiri, ca aperitiv, alături de muștar, ceapă sau murături.'],
+[/parizer|parizel/,'Mezel fiert din carne tocată fin, cu gust delicat. Bun pentru sandvișuri, la micul dejun sau prăjit în tigaie.'],
+[/lebar/,'Lebăr (pastă de ficat) cu textură fină, tartinabilă. Se servește pe pâine proaspătă sau prăjită, la micul dejun ori ca gustare.'],
+[/muschi/,'Mușchi de porc afumat, carne slabă și fragedă cu aromă de fum. Se servește feliat subțire pe platouri reci sau în sandvișuri.'],
+[/slanina.*boia/,'Slănină ardelenească sărată, afumată și dată prin boia de ardei, care îi oferă culoare și un gust ușor picant. Se servește cu ceapă roșie și pâine de casă.'],
+[/slanina/,'Slănină de porc sărată și afumată după rețetă tradițională. Se servește crudă, feliată subțire, cu ceapă și pâine, sau se folosește la gătit, de exemplu la omletă ori la ochiuri.'],
+[/jambon|sunculita|sunca/,'Șuncă gătită și afumată, cu gust fin. Potrivită pentru sandvișuri, pizza, omletă și platouri reci.'],
+[/pastrama/,'Pastramă afumată și condimentată, cu gust intens. Se poate servi rece, feliată, sau încălzită la grătar ori în tigaie, alături de mămăligă și murături.'],
+[/ciolan/,'Ciolan de porc afumat, ingredientul de bază pentru fasole cu ciolan, ciorbe sau varză călită. Se fierbe sau se coace până devine fraged.'],
+[/plescoi/,'Cârnați de Pleșcoi, specialitate din zona Buzăului, din carne condimentată cu ardei iute și usturoi. Gust picant și intens. Se prăjesc sau se fac la grătar.'],
+[/olten/,'Cârnați oltenești, condimentați după rețetă tradițională din Oltenia. Se prăjesc sau se fac la grătar și se servesc cu mămăligă sau cartofi.'],
+[/moldovenesti/,'Cârnați moldovenești afumați, după rețetă tradițională. Se pot servi reci, feliați, sau prăjiți, cu mămăligă și murături.'],
+[/cabanos/,'Cabanoși: cârnăciori subțiri, afumați și uscați. Se servesc ca gustare, pe platouri reci, sau se adaugă în ciorbe, fasole ori pe pizza.'],
+[/virsli/,'Virșli: cârnăciori fierți și afumați, de inspirație maghiară. Se încălzesc câteva minute în apă fierbinte și se servesc cu muștar și pâine.'],
+[/crenvurst/,'Crenvurști fierți-afumați. Se încălzesc câteva minute în apă fierbinte (fără să fiarbă) și se servesc cu muștar, ketchup sau în hot-dog.'],
+[/gusa/,'Gușă de porc afumată, cu gust bogat. Se servește rece, feliată subțire, cu ceapă și pâine.'],
+[/scarita|coaste/,'Coaste de porc afumate, potrivite pentru fasole, varză călită, ciorbe sau la cuptor.'],
+[/oase afumate/,'Oase de porc afumate, ideale pentru a da gust de afumătură ciorbelor, fasolei bătute sau supelor.'],
+[/soric/,'Șorici de porc, gustare tradițională. Se servește ca atare, cu sare și usturoi, sau prăjit.'],
+[/jumari/,'Jumări de porc crocante, obținute prin topirea slăninii. Se servesc ca gustare, cu ceapă, sau se adaugă în mămăligă, omletă ori pogăcele.'],
+[/\bmici\b|mititei/,'Mici (mititei) din carne tocată, condimentată după rețetă românească. Se fac la grătar sau în tigaie și se servesc cu muștar și pâine.'],
+[/carnat/,'Cârnați tradiționali din carne condimentată. Se prăjesc, se fac la grătar sau la cuptor și se servesc cu mămăligă, cartofi ori murături.'],
+[/salam de sibiu/,'Salam de Sibiu: salam crud-uscat, maturat îndelung, cu înveliș de mucegai nobil. Gust fin, ușor afumat. Se servește feliat foarte subțire.'],
+[/salam de vara/,'Salam de vară, semiafumat, cu gust echilibrat. Bun pentru sandvișuri și platouri reci.'],
+[/salam uscat|sasesc|sarbesc/,'Salam afumat și uscat, cu gust intens de condimente. Se servește feliat subțire pe platouri reci sau în sandvișuri.'],
+[/salam/,'Salam cu gust echilibrat, bun pentru sandvișuri, micul dejun și platouri reci.'],
+[/chisca/,'Chișcă: preparat tradițional ardelenesc pe bază de sânge și carne de porc, umplut în membrană naturală. Se servește prăjită sau rece.'],
+[/burduf/,'Brânză de burduf: brânză de oaie frământată și maturată, cu gust puternic, sărat și ușor picant. Se servește cu mămăligă, roșii și ceapă sau pe pâine.'],
+[/telemea.*oaie/,'Telemea de oaie maturată în saramură, cu gust sărat și intens. Excelentă cu roșii, ardei și ceapă verde sau în plăcinte.'],
+[/telemea/,'Telemea de vacă în saramură, cu gust ușor sărat. Bună pentru salate, cu roșii și castraveți, sau în plăcinte și la mămăligă.'],
+[/urda/,'Urdă proaspătă, dulce și fină, obținută din zer. Bună pentru clătite, plăcinte, papanași sau simplă, cu smântână.'],
+[/^cas /,'Caș de vacă: brânză proaspătă, tânără, cu gust dulce-lăptos. Se servește ca atare sau se folosește în plăcinte.'],
+[/cascaval.*afumat/,'Cașcaval afumat, cu aromă de fum și textură elastică. Bun pane, pe pizza, în sandvișuri sau pe platouri.'],
+[/cascaval/,'Cașcaval cu gust plin. Bun feliat, pane, ras pe paste sau gratinat.'],
+[/branza topita/,'Brânză topită cremoasă, ușor de tartinat pe pâine. Bună la micul dejun și pentru gustări rapide.'],
+[/oua/,'Ouă, cofraj de 10 bucăți. Pentru omletă, prăjituri, cozonac sau fierte.'],
+[/kefir/,'Kefir: băutură din lapte fermentat, ușor acrișoară și răcoritoare. Se bea simplu, alături de mămăligă sau se folosește în aluaturi.'],
+[/untura/,'Untură de porc pentru gătit și prăjit. Dă gust tradițional mâncărurilor, cartofilor prăjiți și aluaturilor.'],
+[/salata icre/,'Salată de icre gata preparată, cremoasă. Se servește pe pâine prăjită, cu ceapă tocată.'],
+[/icre/,'Icre sărate, ingredientul de bază pentru salata de icre de casă, bătută cu ulei și ceapă tocată.'],
+[/smantana/,'Smântână grasă, groasă și cremoasă. Pentru ciorbe, sarmale, papanași, mămăligă cu brânză sau prăjituri.'],
+[/frisca/,'Frișcă lichidă pentru bătut sau gătit. Ideală pentru deserturi, torturi, sosuri și cafea.'],
+[/tocana/,'Tocană de legume gata gătită, bună ca garnitură sau ca mâncare de post.'],
+[/mandy|vegetal/,'Pateu vegetal tartinabil, bun pe pâine la micul dejun și la gustări, inclusiv în perioadele de post.'],
+[/masline/,'Măsline negre, gustare clasică pe platoul cu brânzeturi și mezeluri, în salate sau pe pizza.'],
+[/balsam/,'Balsam de rufe care înmoaie țesăturile și le lasă un parfum plăcut. Se adaugă în compartimentul pentru balsam al mașinii de spălat.'],
+[/pardoseli/,'Soluție pentru curățarea pardoselilor. Curăță și parfumează gresia, faianța și alte suprafețe lavabile. Se diluează conform instrucțiunilor de pe etichetă.'],
+[/axion/,'Detergent de vase care îndepărtează grăsimea de pe vase și tacâmuri.'],
+[/alcool sanitar/,'Alcool sanitar pentru dezinfectarea suprafețelor și a pielii intacte. Doar pentru uz extern.'],
+[/visinata/,'Vișinată: lichior tradițional din vișine, dulce și aromat. Se servește rece, ca digestiv sau la desert.'],
+[/visine|cirese|lichior/,'Băutură dulce cu gust de fructe. Se servește rece, ca aperitiv, digestiv sau la desert.'],
+[/ciocolata.*bauturi/,'Lichior cu gust de ciocolată, dulce și cremos. Se servește rece, simplu, cu gheață sau în cafea.'],
+[/\bgin\b/,'London Dry Gin, distilat aromatizat cu ienupăr. Se servește cu apă tonică și gheață sau în cocktailuri.'],
+[/tarie|palinc/,'Tărie de Bihor: băutură spirtoasă tradițională din prune, din zona Bihorului. Se servește ca aperitiv, la temperatura camerei sau ușor răcită.'],
+[/coniac|alexandrion|brancoveanu/,'Băutură spirtoasă de tip brandy, învechită în butoaie de stejar, cu note de fructe uscate, vanilie și lemn. Se servește la temperatura camerei, în pahar de coniac.'],
+[/pelin/,'Pelin: vin aromatizat cu pelin, băutură tradițională de primăvară. Gust dulce-amărui și răcoritor. Se servește bine răcit.'],
+[/busuioaca/,'Busuioacă de Bohotin: vin roze aromat din podgoria Bohotin (județul Iași), cu arome de trandafir, busuioc și fructe de pădure. Se servește răcit, la 10–12 °C.'],
+[/feteasca regala/,'Fetească Regală, soi românesc de struguri albi. Vin alb proaspăt și fructat, potrivit cu pește, carne albă și brânzeturi. Se servește răcit, la 8–10 °C.'],
+[/grasa de cotnari/,'Grasă de Cotnari: vin alb din podgoria Cotnari, cu arome de miere și fructe coapte. Se servește răcit, la desert sau ca aperitiv.'],
+[/sangele ursului/,'Vin roșu dulce, cu gust fructat și catifelat. Se servește ușor răcit, la 14–16 °C, la desert sau alături de friptură.'],
+[/sange de taur/,'Vin roșu cu gust dulceag și fructat. Se servește ușor răcit, la 14–16 °C.'],
+[/vin alb|blanc/,'Vin alb, proaspăt și aromat. Potrivit cu pește, carne albă, paste și brânzeturi. Se servește răcit, la 8–10 °C.'],
+[/vin rosu/,'Vin roșu, fructat, potrivit cu friptură, preparate din carne și brânzeturi maturate. Se servește la 14–18 °C.'],
+[/750 ml.*bauturi/,'Vin la sticlă de 750 ml. Se servește la temperatura potrivită: vinurile albe și roze bine răcite, cele roșii ușor răcite.'],
+[/cozonac/,'Cozonac pufos, umplut generos, după rețetă tradițională românească. Nelipsit de pe masa de sărbători și bun oricând la o cafea sau un ceai.'],
+[/insiropat/,'Prăjitură însiropată cu nucă și cacao, gata de servit. Desert dulce și aromat, bun la cafea.'],
+[/foi napolitane/,'Foi de napolitană pentru prăjituri de casă. Se umplu cu cremă (de ciocolată, nucă sau vanilie) și se lasă la presat câteva ore.'],
+[/napolitane/,'Napolitane crocante cu cremă, gustare dulce pentru pauze și la cafea.'],
+[/bors magic/,'Amestec pentru ciorbă, cu gust acrișor de borș și verdețuri. Se adaugă în ciorbe spre finalul fierberii.'],
+[/maggi|vegeta|delikat/,'Condiment cu legume deshidratate, pentru ciorbe, supe, tocănițe, friptură și sosuri. Se adaugă în timpul gătitului, după gust.'],
+[/zahar pudra/,'Zahăr pudră pentru ornarea prăjiturilor, cozonacului și clătitelor sau pentru creme și glazuri.'],
+[/crema prajituri|fructe de padure 50|lamaie 50/,'Praf pentru cremă de prăjituri, se prepară rapid cu lapte. Pentru umplerea prăjiturilor, rulourilor și tartelor sau ca desert.'],
+[/lamaie de sare/,'Sare de lămâie (acid citric) pentru acrirea ciorbelor, compoturilor și dulcețurilor și pentru deserturi.'],
+[/esenta|rom 30|lamaie 30/,'Esență aromatică pentru prăjituri, cozonac și creme. Câteva picături sunt suficiente.'],
+[/cacao/,'Cacao pudră pentru prăjituri, creme, cozonac și băuturi calde.'],
+[/cremsnit/,'Mix pentru cremșnit de casă. Se prepară conform instrucțiunilor de pe ambalaj.'],
+[/amoniu/,'Amoniu pentru prăjituri și fursecuri: le face pufoase și crocante. Mirosul dispare complet la coacere.'],
+[/conservant/,'Conservant alimentar pentru zacuscă, dulcețuri, murături și alte conserve de casă. Se folosește conform instrucțiunilor de pe plic.'],
+[/pikant fix/,'Amestec pentru murături rapide de castraveți, gogonele sau ardei. Se folosește conform instrucțiunilor de pe plic.'],
+[/gelatina/,'Gelatină pentru prăjituri, torturi, creme, jeleuri și piftie.'],
+[/zahar vanilat/,'Zahăr vanilat pentru prăjituri, cozonac, clătite și creme.'],
+[/drojdie/,'Drojdie uscată de panificație, pentru pâine, cozonac, pizza și aluaturi dospite.'],
+[/praf de copt/,'Praf de copt pentru aluaturi și prăjituri pufoase.'],
+[/sodiu/,'Bicarbonat de sodiu alimentar, pentru aluaturi și prăjituri.'],
+[/scortisoara/,'Scorțișoară aromată pentru cozonac, plăcintă cu mere, orez cu lapte, vin fiert și ceai.'],
+[/cuisoare/,'Cuișoare întregi, cu aromă caldă și intensă. Pentru vin fiert, compoturi, murături, marinade și prăjituri.'],
+[/leustean/,'Leuștean uscat, verdeața nelipsită din ciorbele și borșurile românești.'],
+[/oregano/,'Oregano uscat pentru pizza, paste, sosuri de roșii și salate.'],
+[/tarhon/,'Tarhon uscat, cu aromă specifică, pentru ciorba ardelenească, sosuri și murături.'],
+[/rozmarin/,'Rozmarin uscat pentru friptură de miel și porc, cartofi la cuptor și legume coapte.'],
+[/marar/,'Mărar uscat pentru ciorbe, salate, mâncăruri cu cartofi, sarmale și murături.'],
+[/cimbru/,'Cimbru uscat, condiment tradițional pentru mici, cârnați, fasole și tocănițe.'],
+[/boia.*afumata/,'Boia afumată, cu aromă de fum, pentru tocănițe, gulaș, cartofi și marinade.'],
+[/boia.*iute/,'Boia de ardei iute pentru mâncăruri picante, gulaș, tocănițe și marinade.'],
+[/boia/,'Boia de ardei dulce, care dă culoare și gust tocănițelor, gulașului, ciorbelor și fripturilor.'],
+[/mustar boabe/,'Semințe de muștar pentru murături, marinade și sosuri.'],
+[/piper boabe/,'Piper negru boabe, pentru râșniță, murături, marinade, ciorbe și piftie.'],
+[/piper/,'Piper negru măcinat, condimentul de bază din orice bucătărie.'],
+[/busuioc/,'Busuioc uscat pentru sosuri de roșii, paste, pizza și salate.'],
+[/dafin/,'Foi de dafin pentru ciorbe, sarmale, tocănițe, murături și marinade.'],
+[/amidon/,'Amidon de porumb pentru îngroșarea sosurilor, budincilor și cremelor.'],
+[/susan/,'Semințe de susan pentru pâine, covrigi, salate și preparate asiatice.'],
+[/maghiran/,'Maghiran uscat, condiment tradițional pentru cârnați, tobă, ciorbe și fasole.'],
+[/usturoi granulat/,'Usturoi granulat: gust de usturoi fără curățat și tocat. Pentru friptură, marinade, sosuri și legume.'],
+[/chimen/,'Semințe de chimen pentru varză, pâine, cartofi și mâncăruri cu carne de porc.'],
+[/ienibahar/,'Ienibahar măcinat, cu aromă caldă, asemănătoare unui amestec de piper, cuișoare și scorțișoară. Pentru tobă, piftie, marinade și cozonac.'],
+[/ghimbir/,'Ghimbir măcinat pentru ceai, prăjituri, turtă dulce și mâncăruri asiatice.'],
+[/punga magica/,'Pungă pentru cuptor cu condimente: carnea sau cartofii se pun în pungă împreună cu condimentele și se coc. Rezultat suculent, fără vase de spălat.'],
+[/pateu|pate /,'Pateu fin și tartinabil, gata de servit pe pâine, la micul dejun sau la gustare.'],
+[/fasole cu costita/,'Fasole cu costiță afumată, mâncare tradițională gata gătită. Se încălzește și se servește cu ceapă și pâine.'],
+[/supa instant/,'Supă instant, gata în câteva minute cu apă fierbinte.'],
+[/ciorba/,'Ciorbă gata preparată, după rețetă tradițională românească. Se încălzește și se servește, ideal cu smântână și ardei iute.'],
+[/sarmalute/,'Sărmăluțe în foi de varză, gata gătite. Se încălzesc și se servesc cu smântână și mămăligă.'],
+[/zacusca/,'Zacuscă din legume coapte, tartinabilă. Se servește pe pâine, ca aperitiv sau ca mâncare de post.'],
+[/vinete coapte/,'Vinete coapte și curățate, gata pentru salata de vinete de casă, cu ceapă și ulei sau maioneză.'],
+[/vinete/,'Vinete picante gata preparate, gustare tartinabilă.'],
+[/rosii/,'Roșii tăiate cuburi, pentru sosuri, tocănițe, ciorbe și paste.'],
+[/crema gulas/,'Cremă de ardei pentru gulaș, care dă gust și culoare gulașului, tocănițelor și supelor.'],
+[/hrean/,'Hrean în oțet, picant. Se servește cu friptură, pește, tobă sau piftie.'],
+[/ketchup/,'Ketchup dulce pentru cartofi prăjiți, paste, pizza și hot-dog.'],
+[/sos de usturoi/,'Sos de usturoi gata preparat, pentru friptură, pui la grătar și cartofi.'],
+[/mustar/,'Muștar pentru mici, cârnați, crenvurști, friptură și sandvișuri.'],
+[/otet/,'Oțet pentru salate, murături și marinade.'],
+[/ardei iuti/,'Ardei iuți murați, pentru ciorbe, fasole și mâncăruri cu carne.'],
+[/bors/,'Borș pentru acrirea ciorbelor și borșurilor românești. Se adaugă spre finalul fierberii.'],
+[/taitei/,'Tăiței cu ou, pentru supă de găină sau ca garnitură.'],
+[/fasole/,'Fasole albă boabe, pentru fasole bătută, fasole cu cârnați sau ciorbă de fasole.'],
+[/orez/,'Orez pentru sarmale, pilaf, orez cu lapte și garnituri.'],
+[/arpacas/,'Arpacaș (orz decorticat), pentru ciorbe, sarmale și mâncăruri cu ciuperci sau carne.'],
+[/malai/,'Mălai (făină de porumb) pentru mămăligă, mălai copt și pane.'],
+[/gris/,'Griș pentru găluște, budinci, griș cu lapte și prăjituri.'],
+[/faina/,'Făină albă tip 000 pentru pâine, cozonac, prăjituri și clătite.'],
+[/zahar/,'Zahăr alb pentru gătit, prăjituri, dulcețuri și băuturi.'],
+[/pernite/,'Pernițe crocante cu umplutură, pentru micul dejun cu lapte sau ca gustare.'],
+[/cips|fripsy/,'Chips crocant, gustare sărată pentru film, petreceri sau pauze.']
+];
+const CAT={
+'Mezeluri și produse din carne':['Preparat după rețetă tradițională, ideal pentru platouri reci, sandvișuri și mese în familie.','Se păstrează la frigider, la 0–4 °C. După deschidere, se consumă în câteva zile.'],
+'Cârnați și afumături':['Afumătură tradițională românească, cu gust intens, pentru gătit sau pentru platouri reci.','Se păstrează la frigider, la 0–4 °C. După deschidere, se consumă în câteva zile.'],
+'Salamuri și șunci':['Mezel pentru sandvișuri, micul dejun și platouri reci.','Se păstrează la frigider, la 0–4 °C. După deschidere, se consumă în câteva zile.'],
+'Brânzeturi și lactate':['Produs lactat pentru micul dejun, gătit și deserturi.','Se păstrează la frigider, la 2–6 °C.'],
+'Produse de curățenie':['Produs pentru curățenie și îngrijirea casei.','A nu se lăsa la îndemâna copiilor. Citiți eticheta înainte de utilizare.'],
+'Băuturi alcoolice':['Băutură alcoolică. Se consumă cu moderație.','Se păstrează la loc răcoros, ferit de lumina directă a soarelui. Vânzare doar persoanelor cu vârsta legală.'],
+'Cozonac, dulciuri și produse de patiserie':['Desert dulce, bun la cafea, la ceai sau ca gustare.','Se păstrează la loc uscat și răcoros, în ambalajul închis.'],
+'Condimente':['Ingredient pentru gătit și copt, pentru mâncăruri și prăjituri cu gust românesc.','Se păstrează în ambalaj închis, la loc uscat și ferit de umezeală.'],
+'Conserve, pateuri și produse de bază':['Produs de bază pentru cămară, ușor de folosit în bucătăria de zi cu zi.','Se păstrează la loc uscat și răcoros. După deschidere, se păstrează la frigider.']
+};
+const parseNum=s=>{const m=(s||'').match(/(\d+(?:,\d+)?)/);return m?parseFloat(m[1].replace(',','.')):NaN};
+function qty(name,price){
+  const unit=(price.split('/')[1]||'').trim();
+  const rx=/(\d+(?:,\d+)?)\s*(kg|g|ml|l)\b/i;
+  let m=unit.match(rx)||name.match(rx);
+  if(unit==='kg') return {label:'la kilogram (vrac)',perKg:null,u:'kg',raw:'kg'};
+  if(!m){const c=name.match(/(\d+)\s*ou/);return c?{label:c[1]+' bucăți'}:null}
+  let v=parseFloat(m[1].replace(',','.')),u=m[2].toLowerCase();
+  const label=m[1]+' '+u+(unit&&unit.match(rx)?' (preț pe această cantitate)':'');
+  let base=u==='g'?v/1000:u==='ml'?v/1000:v;
+  return {label,base,u:(u==='g'||u==='kg')?'kg':'litru'};
 }
-q.addEventListener('input',filter);cat.addEventListener('change',filter);
+const cards=[...document.querySelectorAll('.card')];
+const data=cards.map((card,i)=>{
+  const img=card.querySelector('img'),name=card.querySelector('h3').textContent.trim();
+  const bEl=card.querySelector('.brand'),brand=bEl?bEl.textContent.trim():'';
+  const price=card.querySelector('.price').textContent.trim(),cat=card.dataset.cat;
+  const key=norm(name+' '+brand+' '+cat);
+  let desc;for(const [r,t] of RULES){if(r.test(key)){desc=t;break}}
+  if(!desc)desc=(CAT[cat]||['',''])[0];
+  const slug=norm(name).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'-'+(i+1);
+  card.dataset.idx=i;card.dataset.n=norm(card.dataset.search+' '+name+' '+brand+' '+cat);
+  card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Detalii: '+name);
+  const more=document.createElement('div');more.className='more';more.innerHTML='Vezi detalii '+arrow;card.querySelector('.body').appendChild(more);
+  card.addEventListener('click',()=>openP(i));
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openP(i)}});
+  return {card,img,name,brand,price,cat,desc,slug,num:parseNum(price),i};
+});
+// sections
+const sections=[...document.querySelectorAll('.section')];
+sections.forEach(sec=>{const n=sec.querySelectorAll('.card').length;const h=sec.querySelector('h2');h.insertAdjacentHTML('beforeend',' <span class="count">'+n+' produse</span>');sec.id='cat-'+norm(sec.dataset.section).replace(/[^a-z0-9]+/g,'-')});
+// chips
+const chipsEl=document.getElementById('chips');let curCat='';
+function chip(label,val,n){const b=document.createElement('button');b.type='button';b.className='chip'+(val===''?' active':'');b.dataset.val=val;b.innerHTML=label+' <i>'+n+'</i>';b.onclick=()=>{curCat=val;chipsEl.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c===b));filter();document.getElementById('produse').scrollIntoView({behavior:'smooth'})};chipsEl.appendChild(b)}
+chip('Toate','',cards.length);sections.forEach(s=>chip(s.dataset.section,s.dataset.section,s.querySelectorAll('.card').length));
+// filter/sort
+const q=document.getElementById('q'),sort=document.getElementById('sort'),info=document.getElementById('resultInfo'),empty=document.getElementById('empty'),clr=document.getElementById('clear');
+function filter(){
+  const t=norm(q.value);clr.style.display=q.value?'block':'none';let total=0;
+  sections.forEach(sec=>{const ok=!curCat||sec.dataset.section===curCat;let v=0;
+    sec.querySelectorAll('.card').forEach(c=>{const s=ok&&(!t||t.split(' ').every(w=>c.dataset.n.includes(w)));c.style.display=s?'':'none';if(s)v++});
+    sec.style.display=v?'':'none';total+=v});
+  info.textContent=t||curCat?(total===1?'1 produs găsit':total+' produse găsite')+(t?' pentru „'+q.value.trim()+'”':''):cards.length+' produse în catalog';
+  empty.style.display=total?'none':'block';
+}
+function doSort(){const m=sort.value;sections.forEach(sec=>{const g=sec.querySelector('.grid');const arr=[...g.querySelectorAll('.card')].map(c=>data[c.dataset.idx]);
+  arr.sort((a,b)=>m==='asc'?a.num-b.num:m==='desc'?b.num-a.num:m==='az'?a.name.localeCompare(b.name,'ro'):a.i-b.i);arr.forEach(d=>g.appendChild(d.card))})}
+q.addEventListener('input',filter);sort.addEventListener('change',doSort);clr.onclick=()=>{q.value='';filter();q.focus()};
+filter();
+// modal
+const modal=document.getElementById('modal'),dlg=modal.querySelector('.dialog');let lastFocus=null;
+function openP(i){
+  const d=data[i];lastFocus=lastFocus||document.activeElement;
+  const qt=qty(d.name,d.price),storage=(CAT[d.cat]||['',''])[1];
+  let ref='';
+  if(qt&&qt.base&&!isNaN(d.num)){ref=fmt(d.num/qt.base)+' / '+qt.u}
+  else if(qt&&qt.raw==='kg'){ref=fmt(d.num)+' / kg'}
+  const real=d.brand&&d.brand!=='Produs tradițional';
+  const rows=[['Categorie',d.cat],real?['Firmă / Producător',d.brand]:['Tip','Produs tradițional'],qt?['Cantitate',qt.label]:null,['Preț',d.price],ref?['Preț de referință',ref]:null].filter(Boolean);
+  const sim=data.filter(x=>x.cat===d.cat&&x.i!==d.i).sort((a,b)=>((b.brand===d.brand&&real)-(a.brand===d.brand&&real))||Math.abs(a.i-d.i)-Math.abs(b.i-d.i)).slice(0,4);
+  dlg.innerHTML='<button class="close" aria-label="Închide">×</button><div class="d-grid"><div class="d-photo"><img src="'+d.img.src+'" alt=""></div><div class="d-info">'
+   +'<button class="d-cat" type="button">'+d.cat+'</button>'+(real?'<div class="d-brand">'+d.brand+'</div>':'<div class="d-brand">Produs tradițional</div>')
+   +'<h2 id="mTitle"></h2><div class="d-price">'+d.price+'</div><div class="d-unit">'+(ref?'Preț de referință: '+ref:'')+'</div>'
+   +'<p class="d-desc"></p><table class="d-table">'+rows.map(r=>'<tr><th>'+r[0]+'</th><td>'+r[1]+'</td></tr>').join('')+'</table>'
+   +'<div class="d-tip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg><span><b>Păstrare:</b> '+storage+'</span></div>'
+   +'<div class="d-actions"><a class="btn btn-primary" href="'+TEL+'"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Sună pentru comandă</a>'
+   +'<a class="btn btn-outline" href="'+MAP+'" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Vezi pe hartă</a></div>'
+   +'<div class="d-note">Imaginea are rol de prezentare și poate diferi de produsul din magazin. Pentru ingrediente și alergeni, consultați eticheta produsului.</div></div></div>'
+   +(sim.length?'<div class="similar"><h4>Produse similare</h4><div class="sim-grid">'+sim.map(s=>'<button class="sim" type="button" data-i="'+s.i+'"><img src="'+s.img.src+'" alt="" loading="lazy"><span></span><b>'+s.price+'</b></button>').join('')+'</div></div>':'');
+  dlg.querySelector('#mTitle').textContent=d.name;dlg.querySelector('.d-desc').textContent=d.desc;
+  dlg.querySelectorAll('.sim').forEach((b,k)=>{b.querySelector('span').textContent=sim[k].name;b.onclick=()=>openP(sim[k].i)});
+  dlg.querySelector('.close').onclick=closeP;
+  dlg.querySelector('.d-cat').onclick=()=>{closeP();const c=[...chipsEl.children].find(c=>c.dataset.val===d.cat);if(c)c.click()};
+  modal.setAttribute('aria-labelledby','mTitle');modal.classList.add('open');document.body.classList.add('lock');dlg.scrollTop=0;
+  history.replaceState(null,'','#'+d.slug);dlg.querySelector('.close').focus();
+}
+function closeP(){modal.classList.remove('open');document.body.classList.remove('lock');history.replaceState(null,'',location.pathname+location.search);if(lastFocus&&lastFocus.focus)lastFocus.focus();lastFocus=null}
+modal.addEventListener('click',e=>{if(e.target===modal)closeP()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeP()});
+if(location.hash){const d=data.find(x=>'#'+x.slug===decodeURIComponent(location.hash));if(d)openP(d.i)}
+// back to top
+const tt=document.getElementById('toTop');addEventListener('scroll',()=>tt.classList.toggle('show',scrollY>700),{passive:true});tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+document.getElementById('year').textContent=new Date().getFullYear();
+})();
+
 </script>
+<script>
+let currentLanguage = "ro";
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: "ro",
+            includedLanguages: "ro,de",
+            autoDisplay: false
+        },
+        "google_translate_element"
+    );
+}
+
+document.getElementById("languageToggle").addEventListener("click", function () {
+
+    const translateSelect = document.querySelector(".goog-te-combo");
+
+    if (!translateSelect) {
+        return;
+    }
+
+    if (currentLanguage === "ro") {
+
+        // Translate Romanian page to German
+        translateSelect.value = "de";
+        translateSelect.dispatchEvent(new Event("change"));
+
+        currentLanguage = "de";
+
+    } else {
+
+        // Translate German page back to Romanian
+        translateSelect.value = "ro";
+        translateSelect.dispatchEvent(new Event("change"));
+
+        currentLanguage = "ro";
+    }
+});
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body></html>
