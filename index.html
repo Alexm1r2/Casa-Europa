@@ -69,7 +69,7 @@ main{max-width:1280px;margin:0 auto;padding:26px 4vw 70px}
 .section h2::before{content:"";width:6px;height:28px;border-radius:4px;background:linear-gradient(var(--accent),var(--accent2))}
 .section h2 .count{font-size:13px;font-weight:600;color:var(--muted);background:#fff;border:1px solid var(--line);padding:3px 10px;border-radius:999px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 10px rgba(60,30,10,.04);transition:transform .2s,box-shadow .2s,border-color .2s;cursor:pointer;display:flex;flex-direction:column;outline:none}
+.card{height:100%;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 10px rgba(60,30,10,.04);transition:transform .2s,box-shadow .2s,border-color .2s;cursor:pointer;display:flex;flex-direction:column;outline:none}
 .card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 16px 34px rgba(60,30,10,.12);border-color:#e3d2c2}
 .card:focus-visible{box-shadow:0 0 0 3px rgba(0,43,127,.35)}
 .photo-wrap{aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:10px;position:relative}
@@ -132,7 +132,7 @@ body.lock{overflow:hidden}
 @media(max-width:900px){.hero-in{grid-template-columns:1fr;padding:36px 4vw 54px}.features{grid-template-columns:repeat(2,1fr)}.footer-in{grid-template-columns:1fr}.d-grid{grid-template-columns:1fr}.d-photo{border-right:0;border-bottom:1px solid var(--line);min-height:0;padding:20px}.d-photo img{max-height:300px}.sim-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.top-actions .btn-primary{display:none}.call-fab{display:inline-flex}.shop-logo{width:50px;height:50px}.brandname strong{font-size:17px}.brandname span{font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.body{padding:10px 11px 12px}h3{font-size:13.5px}.price{font-size:17px}.more{font-size:12px}.features{gap:10px}.feature{padding:12px;flex-direction:column;align-items:flex-start;gap:8px}.d-info{padding:24px 20px}.similar{padding:18px 20px 22px}.modal{padding:0;align-items:flex-end}.dialog{border-radius:22px 22px 0 0;max-height:94vh}.toolbar{margin-top:20px}.search-row select{flex:1}}
 
-.photo-wrap{width:100%;aspect-ratio:1/1}.photo-wrap img{width:100%;height:100%;object-fit:contain}.d-photo{width:100%;aspect-ratio:1/1;min-height:0;padding:14px;display:flex;align-items:center;justify-content:center}.d-photo img{width:100%;height:100%;max-width:100%;max-height:none;object-fit:contain}</style>
+.photo-wrap{width:100%;height:auto;aspect-ratio:1/1;flex:none}.photo-wrap img{width:100%;height:100%;object-fit:contain}.d-photo{width:100%;aspect-ratio:1/1;min-height:0;padding:14px;display:flex;align-items:center;justify-content:center}.d-photo img{width:100%;height:100%;max-width:100%;max-height:none;object-fit:contain}</style>
 </head>
 <body>
 <div id="google_translate_element" style="display:none;"></div>
@@ -429,7 +429,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Mezeluri și produse din carne" data-search=" pastramă oaie">
 <div class="photo-wrap">
-<img alt="Pastramă oaie" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBhc3RyYW3EgyBvYWllPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/produs-1.jpg"/>
+<img alt="Pastramă oaie" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBhc3RyYW3EgyBvYWllPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/pastrama-oaie.jpg"/>
 </div>
 <div class="body">
 <h3>Pastramă oaie</h3>
@@ -439,7 +439,7 @@ body.lock{overflow:hidden}
 <section class="section" data-section="Cârnați și afumături"><h2>Cârnați și afumături</h2><div class="grid">
 <article class="card" data-cat="Cârnați și afumături" data-search=" cârnați de pleșcoi">
 <div class="photo-wrap">
-<img alt="Cârnați de Pleșcoi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkPDonJuYcibaSBkZSBQbGXImWNvaTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/produs-4.jpg"/>
+<img alt="Cârnați de Pleșcoi" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkPDonJuYcibaSBkZSBQbGXImWNvaTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/carnati-de-plescoi.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -519,7 +519,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Cârnați și afumături" data-search="elit crenvurști piept pui elit">
 <div class="photo-wrap">
-<img alt="Crenvurști cu piept pui Elit" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNyZW52dXLImXRpIHBpZXB0IHB1aSBGb3g8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/produs-5.jpg"/>
+<img alt="Crenvurști cu piept pui Elit" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNyZW52dXLImXRpIHBpZXB0IHB1aSBGb3g8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/crenvursti-piept-pui-elit.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Elit</div>
@@ -589,7 +589,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Cârnați și afumături" data-search=" pastramă oaie">
 <div class="photo-wrap">
-<img alt="Pastramă oaie" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBhc3RyYW3EgyBvYWllPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/produs-1.jpg"/>
+<img alt="Pastramă oaie" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlBhc3RyYW3EgyBvYWllPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/pastrama-oaie.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -630,7 +630,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Salamuri și șunci" data-search=" salam porc">
 <div class="photo-wrap">
-<img alt="Salam porc" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNhbGFtIHBvcmM8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/produs-2.jpg"/>
+<img alt="Salam porc" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNhbGFtIHBvcmM8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/salam-porc.jpg"/>
 </div>
 <div class="body">
 <div class="brand"></div>
@@ -670,7 +670,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Salamuri și șunci" data-search="fox șuncă pui fox">
 <div class="photo-wrap">
-<img alt="Șuncă presată piept pui Fox 450 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPsiYdW5jxIMgcHVpIEZveDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/produs-6.jpg"/>
+<img alt="Șuncă presată piept pui Fox 450 g" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPsiYdW5jxIMgcHVpIEZveDwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/sunca-presata-piept-pui-fox-450g.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Fox</div>
@@ -717,7 +717,13 @@ body.lock{overflow:hidden}
 <h3>Salam de Sibiu</h3>
 <div class="price">29,00 €/kg</div>
 </div>
- </div>
+ </article>
+ </div></section>
+<section class="section" data-section="Brânzeturi și lactate"><h2>Brânzeturi și lactate</h2><div class="grid">
+<article class="card" data-cat="Brânzeturi și lactate" data-search=" brânză burduf">
+<div class="photo-wrap">
+<img alt="Brânză burduf" loading="lazy" src="images/burduf-natural.jpg"/>
+</div>
 <div class="body">
 <div class="brand"></div>
 <h3>Brânză burduf</h3>
@@ -726,7 +732,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" burduf natural">
 <div class="photo-wrap">
-<img alt="Burduf natural" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJ1cmR1ZiBuYXR1cmFsPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Burduf%20natural&amp;w=600&amp;h=600"/>
+<img alt="Burduf natural" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJ1cmR1ZiBuYXR1cmFsPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/burduf-natural.jpg"/>
 </div>
 <div class="body">
 <div class="brand"></div>
@@ -736,7 +742,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" cașcaval rucăr">
 <div class="photo-wrap">
-<img alt="Cașcaval Rucăr" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNhyJljYXZhbCBSdWPEg3I8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Ca%C8%99caval%20Ruc%C4%83r&amp;w=600&amp;h=600"/>
+<img alt="Cașcaval Rucăr" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNhyJljYXZhbCBSdWPEg3I8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/cascaval-rucar.jpg"/>
 </div>
 <div class="body">
 <div class="brand"></div>
@@ -746,7 +752,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" cașcaval afumat">
 <div class="photo-wrap">
-<img alt="Cașcaval afumat" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNhyJljYXZhbCBhZnVtYXQ8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="https://tse1.mm.bing.net/th?q=Ca%C8%99caval%20afumat&amp;w=600&amp;h=600"/>
+<img alt="Cașcaval afumat" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkNhyJljYXZhbCBhZnVtYXQ8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/cascaval-afumat.jpg"/>
 </div>
 <div class="body">
 <div class="brand"></div>
@@ -756,7 +762,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search="hochland brânză topită hochland">
 <div class="photo-wrap">
-<img alt="Brânză topită Hochland" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJyw6JuesSDIHRvcGl0xIMgSG9jaGxhbmQ8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/hochland-smantana-1.jpg"/>
+<img alt="Brânză topită Hochland" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkJyw6JuesSDIHRvcGl0xIMgSG9jaGxhbmQ8L3RleHQ+CiAgICA8dGV4dCB4PSI1MCUiIHk9IjU2JSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjNzc3Ij5JbWFnaW5lIHByb2R1czwvdGV4dD4KICAgIDwvc3ZnPg=='" src="images/hochland-smantana-2.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Hochland</div>
@@ -777,7 +783,7 @@ body.lock{overflow:hidden}
 
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" kefir">
 <div class="photo-wrap">
-<img alt="Kefir" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPktlZmlyPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Kefir&amp;w=600&amp;h=600"/>
+<img alt="Kefir" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPktlZmlyPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/kefir.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -787,7 +793,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" untură de porc">
 <div class="photo-wrap">
-<img alt="Untură de porc" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlVudHVyxIMgZGUgcG9yYzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Untur%C4%83%20de%20porc&amp;w=600&amp;h=600"/>
+<img alt="Untură de porc" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlVudHVyxIMgZGUgcG9yYzwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/untura-porc.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -797,7 +803,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" icre sărate">
 <div class="photo-wrap">
-<img alt="Icre sărate" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkljcmUgc8SDcmF0ZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Icre%20s%C4%83rate&amp;w=600&amp;h=600"/>
+<img alt="Icre sărate" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkljcmUgc8SDcmF0ZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/icre-sarate.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -807,7 +813,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" salată icre">
 <div class="photo-wrap">
-<img alt="Salată icre" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNhbGF0xIMgaWNyZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Salat%C4%83%20icre&amp;w=600&amp;h=600"/>
+<img alt="Salată icre" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNhbGF0xIMgaWNyZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/salata-icre.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -817,7 +823,7 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" smântână 40% grăsime">
 <div class="photo-wrap">
-<img alt="Smântână 40% grăsime" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNtw6JudMOibsSDIDQwJSBncsSDc2ltZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="https://tse1.mm.bing.net/th?q=Sm%C3%A2nt%C3%A2n%C4%83%2040%25%20gr%C4%83sime&amp;w=600&amp;h=600"/>
+<img alt="Smântână 40% grăsime" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPlNtw6JudMOibsSDIDQwJSBncsSDc2ltZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTYlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM3NzciPkltYWdpbmUgcHJvZHVzPC90ZXh0PgogICAgPC9zdmc+'" src="images/smantana-40.jpg"/>
 </div>
 <div class="body">
 <div class="brand">Produs tradițional</div>
@@ -827,10 +833,10 @@ body.lock{overflow:hidden}
 </article>
 <article class="card" data-cat="Brânzeturi și lactate" data-search=" frișcă lichidă">
 <div class="photo-wrap">
-<img alt="Frișcă lichidă" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZyaciZY8SDIGxpY2hpZMSDPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="https://tse1.mm.bing.net/th?q=Fri%C8%99c%C4%83%20lichid%C4%83&amp;w=600&amp;h=600"/>
+<img alt="Frișcă lichidă" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNTAwIj4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNmMmYyZjIiLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNDUlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0NDQiPkZyaciZY8SDIGxpY2hpZMSDPC90ZXh0PgogICAgPHRleHQgeD0iNTAlIiB5PSI1NiUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzc3NyI+SW1hZ2luZSBwcm9kdXM8L3RleHQ+CiAgICA8L3N2Zz4='" src="images/frisca-hulala.jpg"/>
 </div>
 <div class="body">
-<div class="brand">Holala</div>
+<div class="brand">Hulala</div>
 <h3>Frișcă lichidă</h3>
 <div class="price">4,49 €/500 g</div>
 </div>
@@ -2843,6 +2849,18 @@ document.getElementById('year').textContent=new Date().getFullYear();
 
 </script>
 <script>
+// Show a consistent placeholder when a remote or repository image cannot be loaded.
+document.addEventListener("error", function (event) {
+    const image = event.target;
+    if (!(image instanceof HTMLImageElement) || image.dataset.fallbackApplied) return;
+    image.dataset.fallbackApplied = "true";
+    image.alt = "Imagine indisponibilă";
+    image.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect width="400" height="400" fill="#f5f1eb"/><g fill="none" stroke="#b8afa5" stroke-width="8"><rect x="105" y="105" width="190" height="150" rx="14"/><circle cx="160" cy="155" r="18"/><path d="m115 235 55-55 38 38 28-28 49 49"/></g><text x="200" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#6f6660">Imagine indisponibilă</text></svg>'
+    );
+}, true);
+</script>
+<script>
 let currentLanguage = "ro";
 
 function googleTranslateElementInit() {
@@ -2884,6 +2902,10 @@ document.getElementById("languageToggle").addEventListener("click", function () 
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body></html>
+
+
+
+
 
 
 
