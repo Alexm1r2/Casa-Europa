@@ -2,6 +2,7 @@
 <html lang="ro">
 <head>
 <meta charset="utf-8"/>
+<meta name="referrer" content="no-referrer"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Casa Europa – Produse românești în Warburg</title>
 <meta name="description" content="Catalogul Casa Europa: mezeluri, brânzeturi, vinuri, dulciuri, condimente și conserve românești, cu prețuri în euro. Sternstraße 1, 34414 Warburg."/>
@@ -139,7 +140,8 @@ body.lock{overflow:hidden}
 @media(max-width:900px){.hero-in{grid-template-columns:1fr;padding:36px 4vw 54px}.features{grid-template-columns:repeat(2,1fr)}.footer-in{grid-template-columns:1fr}.d-grid{grid-template-columns:1fr}.d-photo{border-right:0;border-bottom:1px solid var(--line);min-height:0;padding:20px}.d-photo img{max-height:300px}.sim-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.top-actions .btn-primary{display:none}.call-fab{display:inline-flex}.shop-logo{width:50px;height:50px}.brandname strong{font-size:17px}.brandname span{font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.body{padding:10px 11px 12px}h3{font-size:13.5px}.price{font-size:17px}.more{font-size:12px}.features{gap:10px}.feature{padding:12px;flex-direction:column;align-items:flex-start;gap:8px}.d-info{padding:24px 20px}.similar{padding:18px 20px 22px}.modal{padding:0;align-items:flex-end}.dialog{border-radius:22px 22px 0 0;max-height:94vh}.toolbar{margin-top:20px}.search-row select{flex:1}}
 
-.photo-wrap{width:100%;height:auto;aspect-ratio:1/1;flex:none}.photo-wrap img{width:100%;height:100%;object-fit:contain}.d-photo{width:100%;aspect-ratio:1/1;min-height:0;padding:14px;display:flex;align-items:center;justify-content:center}.d-photo img{width:100%;height:100%;max-width:100%;max-height:none;object-fit:contain}</style>
+.photo-wrap{width:100%;height:auto;aspect-ratio:1/1;flex:none}.photo-wrap img{width:100%;height:100%;object-fit:contain}.d-photo{width:100%;aspect-ratio:1/1;min-height:0;padding:14px;display:flex;align-items:center;justify-content:center}.d-photo img{width:100%;height:100%;max-width:100%;max-height:none;object-fit:contain}.footer-legal-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:0 4vw 20px}
+</style>
 </head>
 <body>
 <div id="google_translate_element" style="display:none;"></div>
@@ -2603,7 +2605,7 @@ body.lock{overflow:hidden}
 </div>
 <div class="footer-impressum">
 <details>
-<summary class="btn btn-light">Impressum</summary>
+<summary class="btn btn-light">Date de contact / Kontakt</summary>
 <div class="impressum-panel">
 <h4>Impressum</h4>
 <address><strong>Bălan Nicolae-Bebe</strong><br>Casa Europa<br>Sternstraße 1<br>34414 Warburg<br>
@@ -2612,7 +2614,7 @@ E-Mail: <a href="mailto:bosoibebe@gmail.com">bosoibebe@gmail.com</a></address>
 </div>
 </details>
 </div>
-<div class="copy">© <span id="year"></span> <span class="notranslate" translate="no">Casa Europa</span> · Toate drepturile rezervate</div>
+<div class="footer-legal-links"><a class="btn btn-light" href="legal.html#impressum">Impressum / Date legale</a><a class="btn btn-light" href="legal.html#privacy">Datenschutz / Confidențialitate</a></div><div class="copy">© <span id="year"></span> <span class="notranslate" translate="no">Casa Europa</span> · Toate drepturile rezervate</div>
 </footer>
 <a class="btn btn-primary call-fab notranslate" translate="no" href="tel:+4915224297055"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> Sună</a>
 <button class="to-top" id="toTop" type="button" aria-label="Înapoi sus"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
@@ -2878,6 +2880,7 @@ document.addEventListener("error", function (event) {
 </script>
 <script>
 let currentLanguage = "ro";
+let translateLoader = null;
 
 function googleTranslateElementInit() {
     new google.translate.TranslateElement(
@@ -2890,33 +2893,55 @@ function googleTranslateElementInit() {
     );
 }
 
-document.getElementById("languageToggle").addEventListener("click", function () {
+function loadGoogleTranslate() {
+    if (document.querySelector(".goog-te-combo")) return Promise.resolve();
+    if (!translateLoader) {
+        translateLoader = new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            script.async = true;
+            script.onload = () => {
+                const started = Date.now();
+                const waitForSelect = () => {
+                    if (document.querySelector(".goog-te-combo")) return resolve();
+                    if (Date.now() - started > 10000) return reject(new Error("Google Translate did not initialize"));
+                    window.setTimeout(waitForSelect, 50);
+                };
+                waitForSelect();
+            };
+            script.onerror = () => reject(new Error("Google Translate could not be loaded"));
+            document.head.appendChild(script);
+        }).catch(error => {
+            translateLoader = null;
+            throw error;
+        });
+    }
+    return translateLoader;
+}
+
+document.getElementById("languageToggle").addEventListener("click", async function () {
+    if (!document.querySelector(".goog-te-combo")) {
+        const accepted = window.confirm(
+            "Google Translate este un serviciu extern. Dacă continui, Google poate primi adresa IP, date despre browser și textul paginii și poate folosi cookie-uri. Continui? / Google Translate ist ein externer Dienst. Wenn Sie fortfahren, kann Google Ihre IP-Adresse, Browserdaten und Seitentexte erhalten und Cookies verwenden. Fortfahren?"
+        );
+        if (!accepted) return;
+        try {
+            await loadGoogleTranslate();
+        } catch (error) {
+            window.alert("Traducerea nu s-a putut încărca. / Die Übersetzung konnte nicht geladen werden.");
+            return;
+        }
+    }
 
     const translateSelect = document.querySelector(".goog-te-combo");
+    if (!translateSelect) return;
 
-    if (!translateSelect) {
-        return;
-    }
+    const nextLanguage = currentLanguage === "ro" ? "de" : "ro";
+    translateSelect.value = nextLanguage;
+    translateSelect.dispatchEvent(new Event("change"));
+    currentLanguage = nextLanguage;
+});</script>
 
-    if (currentLanguage === "ro") {
-
-        // Translate Romanian page to German
-        translateSelect.value = "de";
-        translateSelect.dispatchEvent(new Event("change"));
-
-        currentLanguage = "de";
-
-    } else {
-
-        // Translate German page back to Romanian
-        translateSelect.value = "ro";
-        translateSelect.dispatchEvent(new Event("change"));
-
-        currentLanguage = "ro";
-    }
-});
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body></html>
 
 
